@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+
+require("dotenv").config();
+const PORT = process.env.PORT || 4000;
 
 // // used to parse request.body in express
 // const bodyParser = require("body-parser")
@@ -18,8 +20,8 @@ app.post("/car", (req, res) => {
   res.send("Recieved a post request");
 });
 
-app.listen(port, () => {
-  console.log(`App is started on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`App is started on port ${PORT}`);
 });
 
 // const mongoose = require("mongoose");
